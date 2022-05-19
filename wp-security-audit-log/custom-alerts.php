@@ -15,7 +15,7 @@ $custom_alerts = array(
                 1010000,
                 WSAL_MEDIUM,
                 __('User enrolled in a course', 'wsal-fabulatheque'),
-                __('%CustomAlertText%', 'wsal-fabulatheque'),
+                __('User %UserId% enrolled in course %CourseId%', 'wsal-fabulatheque'),
                 array(),
                 array(),
                 'learnpress',

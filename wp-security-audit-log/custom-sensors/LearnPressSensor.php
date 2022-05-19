@@ -16,18 +16,22 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
      */
     public function HookEvents() {
         // fires when a new post_tag is created.
-        add_action( 'learn-press/after-enroll-form', array( $this, 'LogLessonComplete' ) );
+        add_action( 'learnpress/user/course-enrolled', array( $this, 'LogLessonEnroll' ), 10, 3 );
     }
 
     /**
-     * A custom logging function. Logs a custom event with code 4444
+     * Log user enrollment to LearnPress courses
      */
-    public function LogLessonComplete() {
+    public function LogLessonEnroll( $order_id, $course_id, $user_id ) {
         $alert_code = 1010000;
-        $alert_text = __( 'This is the custom text', 'wp-fabulatheque' );
+
+        // Very important: these variable will also show up in the wsal_metadata
+        // database table.
         $variables = array(
-            'CustomAlertText' => $alert_text,
+            'UserId' => esc_html( $user_id ),
+            'CourseId' => esc_html( $course_id ),
         );
+        // TODO: find a way to show the course name
 
         $this->plugin->alerts->Trigger( $alert_code, $variables );
     }
