@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: WP Activity Log Extension for the Fabulatheque website
- * Plugin URI: https://wpactivitylog.com/extensions/
- * Description: A WP Activity Log plugin extension
- * Text Domain: my-custom-textdomain
+ * Plugin Name: WP Activity Log for Fabulatheque
+ * Plugin URI: https://github.com/Dettorer/wsal-fabulatheque
+ * Description: A WP Activity Log plugin extension for the Fabulatheque needs not already covered by another WP Activity Log extension
+ * Text Domain: wsal-fabulatheque
  * Author: Paul Hervot
  * Author URI: https://github.com/Dettorer
  * Version: 1.0.0
@@ -15,7 +15,7 @@
  */
 
 /*
-    Copyright(c) 2020  WP White Security  (email : info@wpwhitesecurity.com)
+    Copyright(c) 2022  Paul Hervot
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
