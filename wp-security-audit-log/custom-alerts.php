@@ -12,14 +12,14 @@ $custom_alerts = array(
     __('LearnPress Events', 'wsal-fabulatheque') => array(
         __('Courses', 'wsal-fabulatheque') => array(
             array(
-                1010000, # A user enrolled in a lesson
+                1010000, # A user enrolled in a course
                 WSAL_MEDIUM,
                 __('User enrolled in a course', 'wsal-fabulatheque'),
                 __('User %UserId% enrolled in course %CourseId%', 'wsal-fabulatheque'),
                 array(),
                 array(),
                 'learnpress',
-                'enrolled',
+                'course-enrolled',
             ),
 
             array(

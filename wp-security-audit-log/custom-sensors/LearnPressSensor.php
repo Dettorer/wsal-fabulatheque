@@ -16,14 +16,14 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
      */
     public function HookEvents() {
         // fires when a new post_tag is created.
-        add_action( 'learnpress/user/course-enrolled', array( $this, 'LogLessonEnroll' ), 10, 3 );
+        add_action( 'learnpress/user/course-enrolled', array( $this, 'LogCourseEnroll' ), 10, 3 );
         add_action( 'learn-press/user-completed-lesson', array( $this, 'LogLessonComplete' ), 10, 3 );
     }
 
     /**
      * Log user enrollment to LearnPress courses
      */
-    public function LogLessonEnroll( $order_id, $course_id, $user_id ) {
+    public function LogCourseEnroll( $order_id, $course_id, $user_id ) {
         $alert_code = 1010000;
 
         // Very important: these variable will also show up in the wsal_metadata
