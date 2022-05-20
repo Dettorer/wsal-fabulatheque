@@ -32,6 +32,17 @@ $custom_alerts = array(
                 'learnpress',
                 'lesson-completed',
             ),
+
+            array(
+                1010002, # A user finished a course
+                WSAL_LOW,
+                __('User finished a course', 'wsal-fabulatheque'),
+                __('User %UserId% finished the course %CourseId%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'learnpress',
+                'course-finished',
+            ),
         )
     )
 );

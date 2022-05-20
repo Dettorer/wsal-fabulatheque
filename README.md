@@ -8,5 +8,5 @@ This allows the logging of the following activities:
 
 - [x] learnpress course enrolling
 - [x] learnpress course progress (lesson completion)
-- [ ] learnpress course completion
+- [x] learnpress course completion
 - [ ] learnpress quizz completion (with success status?)
