@@ -33,7 +33,6 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
             'CourseId' => esc_html( $course_id ),
         );
         // TODO(low): find a way to show the course name
-        // TODO(high): check that user wasn't already enrolled
 
         $this->plugin->alerts->Trigger( $alert_code, $variables );
     }
