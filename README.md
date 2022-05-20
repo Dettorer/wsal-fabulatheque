@@ -7,5 +7,5 @@ third-party extensions of that plugin.
 This allows the logging of the following activities:
 
 - [x] learnpress lesson enrolling
-- [ ] learnpress lesson progress
+- [x] learnpress lesson progress
 - [ ] learnpress lesson completion
