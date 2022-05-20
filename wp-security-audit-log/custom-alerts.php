@@ -43,6 +43,41 @@ $custom_alerts = array(
                 'learnpress',
                 'course-finished',
             ),
+        ),
+
+        __('Quizzes', 'wsal-fabulatheque') => array(
+            array(
+                1010003, # A user started a quiz
+                WSAL_LOW,
+                __('User started a quiz', 'wsal-fabulatheque'),
+                __('User %UserId% started the quiz %QuizId% in the course %CourseId%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'learnpress',
+                'quiz-started',
+            ),
+
+            array(
+                1010004, # A user finished a quiz
+                WSAL_LOW,
+                __('User finished a quiz', 'wsal-fabulatheque'),
+                __('User %UserId% finished the quiz %QuizId% in the course %CourseId%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'learnpress',
+                'quiz-finished',
+            ),
+
+            array(
+                1010005, # A user retried a quiz
+                WSAL_LOW,
+                __('User retried a quiz', 'wsal-fabulatheque'),
+                __('User %UserId% retried the quiz %QuizId% in the course %CourseId%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'learnpress',
+                'quiz-retried',
+            ),
         )
     )
 );
