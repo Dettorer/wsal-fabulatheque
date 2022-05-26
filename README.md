@@ -13,3 +13,5 @@ This allows the logging of the following activities:
 - [x] gamipress points awarded/deducted
 - [x] gamipress ranks awarded/revoked
 - [x] gamipress achievements awarded/revoked
+- [x] front-end-pm new message sent
+- [x] front-end-pm reply to a message (with thread identification)

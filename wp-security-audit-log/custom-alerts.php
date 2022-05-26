@@ -132,4 +132,30 @@ $custom_alerts = array(
             ),
         ),
     ),
+
+    __('Front End PM Events', 'wsal-fabulatheque') => array(
+        __('Messages', 'wsal-fabulatheque') => array(
+            array(
+                1030000, # A user sent a message that was not a reply
+                WSAL_MEDIUM,
+                __('User sent a private message', 'wsal-fabulatheque'),
+                __('The user %AuthorId% sent the message %MessageId% to users [%RecipientIds%]. The message type was %MessageType%.', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'front-end-pm',
+                'message-sent',
+            ),
+
+            array(
+                1030001, # A user *replied to* a message
+                WSAL_MEDIUM,
+                __('User replied to a private message', 'wsal-fabulatheque'),
+                __('The user %AuthorId% sent the message %MessageId% to users [%RecipientIds%] as a reply in the conversation started by the message %FirstMessageInThread%. The message type was %MessageType%.', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'front-end-pm',
+                'message-sent',
+            ),
+        ),
+    ),
 );

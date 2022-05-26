@@ -42,6 +42,11 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
         // Achievements
         add_action( 'gamipress_award_achievement', array( $this, 'LogGPAchievementAwarded' ), 10, 5 );
         add_action( 'gamipress_revoke_achievement_to_user', array( $this, 'LogGPAchievementRevoked' ), 10, 3 );
+
+        /*
+         * Front End PM
+         */
+        add_action( 'fep_action_message_after_sent', array( $this, 'LogFEPMessageSent' ), 10, 3);
     }
 
     /**
@@ -194,5 +199,33 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
         );
 
         $this->plugin->alerts->Trigger( 1020003, $variables );
+    }
+
+    public function LogFEPMessageSent( $message_id, $message, $inserted_message ) {
+        if ( $message["fep_action"] == 'reply' ) {
+            // Very important: these variable will also show up in the wsal_metadata
+            // database table.
+            $variables = array(
+                'MessageId' => esc_html( $message_id ),
+                'AuthorId' => esc_html( $inserted_message->mgs_author ),
+                'RecipientIds' => esc_html( implode( ", ", $message["message_to_id"] )),
+                'MessageType' => esc_html( json_encode( $message["fep_action"] )),
+                'FirstMessageInThread' => esc_html( $inserted_message->mgs_parent ),
+            );
+
+            $this->plugin->alerts->Trigger( 1030001, $variables );
+        } else {
+            // Very important: these variable will also show up in the wsal_metadata
+            // database table.
+            $variables = array(
+                'MessageId' => esc_html( $message_id ),
+                'AuthorId' => esc_html( $inserted_message->mgs_author ),
+                'RecipientIds' => esc_html( implode( ", ", $message["message_to_id"] )),
+                'MessageType' => esc_html( json_encode( $message["fep_action"] )),
+            );
+
+            $this->plugin->alerts->Trigger( 1030000, $variables );
+        }
+
     }
 }
