@@ -32,8 +32,6 @@ class WSAL_Sensors_LearnPressSensor extends WSAL_AbstractSensor {
          * GamiPress sensors
          */
         // Points
-        add_action( 'gamipress_award_points_to_user', array( $this, 'LogGPPointsAwarded' ), 10, 4 );
-        add_action( 'gamipress_deduct_points_to_user', array( $this, 'LogGPPointsDeducted' ), 10, 4 );
         add_action( 'gamipress_update_user_points', array( $this, 'LogGPPointsUpdated' ), 10, 8 );
 
         // Ranks
