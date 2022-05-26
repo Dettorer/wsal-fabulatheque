@@ -10,3 +10,6 @@ This allows the logging of the following activities:
 - [x] learnpress course progress (lesson completion)
 - [x] learnpress course completion
 - [x] learnpress quizz completion (without the success status)
+- [x] gamipress points awarded/deducted
+- [x] gamipress ranks awarded/revoked
+- [x] gamipress achievements awarded/revoked

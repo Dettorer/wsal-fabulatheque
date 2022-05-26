@@ -78,6 +78,91 @@ $custom_alerts = array(
                 'learnpress',
                 'quiz-retried',
             ),
-        )
-    )
+        ),
+    ),
+
+    __('GamiPress Events', 'wsal-fabulatheque') => array(
+        __('Points', 'wsal-fabulatheque') => array(
+            array(
+                1020000, # A user was awarded points
+                WSAL_MEDIUM,
+                __('User was awarded GamiPress points', 'wsal-fabulatheque'),
+                __('User %UserId% was awareded %PointsCount% points of type %PointsType% for the reason %Reason%, these points are related to the achievement %RelatedAchievement%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'points-awarded',
+            ),
+
+            array(
+                1020001, # A user was deducted points
+                WSAL_MEDIUM,
+                __('User was deducted GamiPress points', 'wsal-fabulatheque'),
+                __('User %UserId% was deducted %PointsCount% points of type %PointsType% for the reason %Reason%, these points are related to the achievement %RelatedAchievement%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'points-deducted',
+            ),
+        ),
+
+        __('Rank', 'wsal-fabulatheque') => array(
+            array(
+                1020002, # A user was awarded a rank
+                WSAL_MEDIUM,
+                __('User was awarded a GamiPress rank', 'wsal-fabulatheque'),
+                __('User %UserId% was awareded the rank %RankId%, this rank is related to the achievement %RelatedAchievement%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'rank-awarded',
+            ),
+
+            array(
+                1020003, # A user was revoked a rank
+                WSAL_MEDIUM,
+                __('User had a GamiPress rank revoked', 'wsal-fabulatheque'),
+                __('User %UserId% had the rank %RankId% revoked, their new rank is %NewRankId%. The rank that was revoked is related to the achievement %RelatedAchievement%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'rank-revoked',
+            ),
+
+            array(
+                1020006, # A user had their rank updated
+                WSAL_MEDIUM,
+                __('User had their GamiPress rank updated', 'wsal-fabulatheque'),
+                __('User %UserId% had their rank updated from %OldRank% to %NewRank%, this rank is related to the achievement %RelatedAchievement%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'rank-updated',
+            ),
+        ),
+
+        __('Achievement', 'wsal-fabulatheque') => array(
+            array(
+                1020004, # A user was awarded an achievement
+                WSAL_MEDIUM,
+                __('User was awarded a GamiPress achievement', 'wsal-fabulatheque'),
+                __('User %UserId% was awareded the achievement %AchievementId%', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'achievement-awarded',
+            ),
+
+            array(
+                1020005, # A user had an achievement revoked
+                WSAL_MEDIUM,
+                __('User had a GamiPress achievement revoked', 'wsal-fabulatheque'),
+                __('User %UserId% had the achievement %AchievementId% revoked', 'wsal-fabulatheque'),
+                array(),
+                array(),
+                'gamipress',
+                'achievement-revoked',
+            ),
+        ),
+    ),
 );

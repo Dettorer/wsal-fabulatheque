@@ -6,7 +6,7 @@
  * Text Domain: wsal-fabulatheque
  * Author: Paul Hervot
  * Author URI: https://github.com/Dettorer
- * Version: 1.0.0
+ * Version: 1.1.0
  * License: GPL2
  * Network: true
  *
@@ -53,7 +53,7 @@ $wsal_extension = new WPWhiteSecurity\ActivityLog\Extensions\Common\Core( __FILE
  */
 function wsal_fabulatheque_core_add_custom_event_objects( $objects ) {
     $new_objects = array(
-        'learnpress' => esc_html__('LearnPress', 'wsal-fabulatheque' ),
+        'fabulatheque' => esc_html__('Fabulatheque', 'wsal-fabulatheque' ),
     );
 
     // combine the two arrays.
