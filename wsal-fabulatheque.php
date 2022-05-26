@@ -6,7 +6,7 @@
  * Text Domain: wsal-fabulatheque
  * Author: Paul Hervot
  * Author URI: https://github.com/Dettorer
- * Version: 1.1.0
+ * Version: 1.1.1
  * License: GPL2
  * Network: true
  *
